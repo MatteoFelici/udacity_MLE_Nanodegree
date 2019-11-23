@@ -76,6 +76,7 @@ def train(model, train_loader, epochs, optimizer, loss_fn, device):
     # TODO: Paste the train() method developed in the notebook here.
 
     for epoch in range(1, epochs + 1):
+        optimizer.zero_grad()
         model.train()
         total_loss = 0
         for batch in train_loader:         
